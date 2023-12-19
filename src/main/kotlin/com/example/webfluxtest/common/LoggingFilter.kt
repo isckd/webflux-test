@@ -103,11 +103,12 @@ class LoggingFilter : OncePerRequestFilter() {
         ) {
             val payload = logPayload("", response.contentType, response.contentInputStream)
             log.info(
-                "[{}-RES] {} {} {} {}ms",
+                "[{}-RES] {} {} {} {} {}ms",
                 caller,
                 method,
                 fullURI,
                 payload ?: "",
+                response.status,
                 duration
             )
             logPayload("[RES]", response.contentType, response.contentInputStream)
@@ -130,7 +131,7 @@ class LoggingFilter : OncePerRequestFilter() {
 
         private fun getCaller(caller: String): String {
             return if (caller.isNotEmpty()) {
-                caller.substring(1).uppercase(Locale.getDefault())
+                caller.uppercase(Locale.getDefault())
             } else {
                 "CLIENT"
             }
