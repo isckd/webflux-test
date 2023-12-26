@@ -12,7 +12,7 @@ group = "com.example"
 version = "0.0.1-SNAPSHOT"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_1_8
 }
 
 repositories {
@@ -36,12 +36,17 @@ dependencies {
     // swagger 3.0
     implementation("io.springfox:springfox-boot-starter:3.0.0")
     implementation("io.springfox:springfox-swagger-ui:3.0.0")
+
+    // jetty logging
+    implementation("org.eclipse.jetty:jetty-client:9.4.35.v20201120")
+    implementation("org.eclipse.jetty:jetty-util:9.4.35.v20201120")
+
 }
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs += "-Xjsr305=strict"
-        jvmTarget = "17"
+        jvmTarget = "1.8"
     }
 }
 

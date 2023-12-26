@@ -5,3 +5,6 @@ spring:
   application:
     name: webflux
 
+logging:
+  level:
+    reactor.netty.http.client: DEBUG
