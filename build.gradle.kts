@@ -20,7 +20,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+//    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
@@ -36,10 +36,6 @@ dependencies {
     // swagger 3.0
     implementation("io.springfox:springfox-boot-starter:3.0.0")
     implementation("io.springfox:springfox-swagger-ui:3.0.0")
-
-    // jetty logging
-    implementation("org.eclipse.jetty:jetty-client:9.4.35.v20201120")
-    implementation("org.eclipse.jetty:jetty-util:9.4.35.v20201120")
 
 }
 

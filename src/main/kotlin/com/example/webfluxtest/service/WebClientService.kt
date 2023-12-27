@@ -6,7 +6,7 @@ import org.springframework.web.reactive.function.client.WebClient
 import reactor.core.publisher.Mono
 
 @Service
-class WebfluxService(
+class WebClientService(
     private val webClientBuilder: WebClient.Builder
 ) {
 

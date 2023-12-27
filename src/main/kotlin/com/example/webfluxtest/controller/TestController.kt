@@ -1,6 +1,6 @@
 package com.example.webfluxtest.controller
 
-import com.example.webfluxtest.service.WebfluxService
+import com.example.webfluxtest.service.WebClientService
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.client.RestTemplate
 import kotlin.random.Random
@@ -9,7 +9,7 @@ import kotlin.random.Random
 @RequestMapping("/test")
 class TestController(
     private val restTemplate: RestTemplate,
-    private val webfluxService: WebfluxService
+    private val webClientService: WebClientService
 ) {
 
     @GetMapping("/hello")
@@ -31,7 +31,7 @@ class TestController(
 
     @GetMapping("/test1")
     fun test1(): TestBody {
-        val testBody = webfluxService.hello()
+        val testBody = webClientService.hello()
         return testBody
     }
 }
