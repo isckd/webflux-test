@@ -20,8 +20,8 @@
     <logger name="org.apache.catalina.util.LifecycleBase" level="ERROR"/>
     <!-- ... 기타 로거 설정 ... -->
 
-    <root level="INFO">
-<!--    <root level="DEBUG">-->
+<!--    <root level="INFO">-->
+    <root level="DEBUG">
         <appender-ref ref="CONSOLE" />
     </root>
 </configuration>

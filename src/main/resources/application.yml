@@ -8,3 +8,5 @@ spring:
 logging:
   level:
     reactor.netty.http.client: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor: DEBUG
